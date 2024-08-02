@@ -7,10 +7,12 @@ import mongoose from 'mongoose';
 import Chat from './models/chats.js';
 import UserChats from './models/userChats.js'
 import { ClerkExpressRequireAuth } from '@clerk/clerk-sdk-node';
+import dotenv from 'dotenv';
 
 const port = process.env.PORT || 3000;
 
 const app = express();
+dotenv.config();
 
 const __filename=fileURLToPath(import.meta.url)
 const __dirname=path.dirname(__filename)
